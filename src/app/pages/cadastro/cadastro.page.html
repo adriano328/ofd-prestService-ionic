@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-icon name="chevron-back-outline" style="font-size: 40px; color: white;" routerLink="/login"
+      (click)="clearForm()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <p style="font-size: 30px; text-align: center;">Cadastro</p>
+    <form [formGroup]="forms">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <div class="cam-icon-img" *ngIf="photoShow">
+              <img class="foto" src="{{ photo }}" alt="">
+            </div>
+          </ion-col>
+          <div class="camera-content">
+            <ion-img (click)="takePicture()" class="camera" src="/assets/icon/cam.png" alt=""></ion-img>
+          </div>
+          <ion-col size="12">
+            <ion-input class="input-cadastro" placeholder="Nome Completo" formControlName="nome"></ion-input>
+          </ion-col>
+          <ion-col size="12">
+            <ion-input class="input-cadastro" placeholder="E-mail" formControlName="email"></ion-input>
+          </ion-col>
+          <ion-col size="6">
+            <ion-input class="input-cadastro" placeholder="Senha" formControlName="confirma" type="password" #password>
+            </ion-input>
+          </ion-col>
+          <ion-col size="6">
+            <ion-input class="input-cadastro" placeholder="Confirmar senha" formControlName="senha" type="password"
+              #conf></ion-input>
+          </ion-col>
+          <ion-col size="12">
+            <ion-input class="input-cadastro" placeholder="Telefone" formControlName="telefone"></ion-input>
+          </ion-col>
+          <ion-col size="12">
+            <ion-input class="input-cadastro" placeholder="CEP" formControlName="cep"></ion-input>
+          </ion-col>
+          <ion-col size="6">
+            <ion-input class="input-cadastro" placeholder="Bairro" formControlName="bairro"></ion-input>
+          </ion-col>
+          <ion-col size="6">
+            <ion-input class="input-cadastro" placeholder="N°" formControlName="numero"></ion-input>
+          </ion-col>
+          <ion-col size="6">
+            <ion-input class="input-cadastro" placeholder="Cidade" formControlName="cidade"></ion-input>
+          </ion-col>
+          <ion-col size="6">
+            <ion-input class="input-cadastro" placeholder="Estado" formControlName="estado"></ion-input>
+          </ion-col>
+          <ion-col size="12">
+            <div class="select-count">
+              <p>Tipo de conta</p>
+              <select formControlName="tipoConta" (change)="selectPerfil()" optionValue="">
+                <option *ngFor="let listperfil of perfis" [ngValue]="listperfil">{{PerfilLabel[listperfil]}}</option>
+              </select>
+            </div>
+          </ion-col>
+          <div class="ocupations" *ngIf="canShow">
+            <ion-card class="services">
+              <ion-list>
+                <ion-item>
+                  <ion-select class="input-cadastro" placeholder="Serviços que ofereço" formControlName="tipoServico">
+                    <ion-select-option *ngFor="let ocupation of ocupations" [value]="ocupation">{{ocupation}}
+                    </ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+            </ion-card>
+          </div>
+        </ion-row>
+      </ion-grid>
+    </form>
+    <div class="buttons">
+      <button class="button-save" (click)="save()">Cadastrar</button>
+    </div>
+  </ion-card>
+</ion-content>

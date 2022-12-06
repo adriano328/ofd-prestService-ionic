@@ -1,0 +1,42 @@
+<ion-content>
+  <ion-header>
+    <div class="header-column">
+      <ion-back-button class="icon-back" defaultHref="/professional-window"></ion-back-button>
+    </div>
+  </ion-header>
+  <div class="perfil">
+    <ion-card class="profile">
+      <div class="button-options">
+      </div>
+      <div class="img">
+        <img src="https://img-profile.s3.sa-east-1.amazonaws.com/{{professionalSave?.imagemPerfil}}" alt="">
+      </div>
+      <div class="description">
+        <div class="name">
+          {{professionalSave?.nome}}
+        </div>
+        <div class="endereco" style="margin-left: 1em">
+          <p>Endereço</p>
+          <p>Bairro: {{professionalSave?.endereco?.bairro}}</p>
+          <p>Cidade: {{professionalSave?.endereco?.cidade}}</p>
+          <p>Cep: {{professionalSave?.endereco?.cep}}</p>
+          <p>Estado: {{professionalSave?.endereco?.estado}}</p>
+        </div>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row class="navegate">
+        <ion-col size="6" class="search-button" routerLink="/professional-window">
+          <ion-icon name="search-outline" style="color: white; font-size: 20px;"></ion-icon>
+        </ion-col>
+        <ion-col size="6" class="perfil-button" routerLink="/screen-self-user">
+          <ion-icon name="person-outline" style="color: white; font-size: 20px;"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,54 @@
+.head{
+    background-color: #e8a900;
+    width: 100%;
+ 
+     .search-input{
+         width: 80%;
+         margin: 0 auto;
+         border-radius: 10px;
+         color: black;
+     }
+ }
+
+ .navegate{
+    height: 30px;
+
+    .search-button{
+        text-align: center;
+        cursor: pointer;
+        border-right: 1px solid #cecece;
+    }
+    
+    .perfil-button{
+        text-align: center;
+        cursor: pointer;
+    }
+
+}
+
+.card-professional{
+    display: flex;
+    justify-content: center;
+    width: 37vw;
+    height: 220px;
+    margin-left: 5vw;
+}
+
+.person{
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+.star{
+    width: 12%;
+}
+
+img{
+    border-radius: 50%;
+    height: 105px;
+}
+
+ion-icon{
+    color: #e8a900;
+}

@@ -1,0 +1,41 @@
+ion-content{
+    --background: linear-gradient(0deg, #818181, #e6e6e6);
+    
+    .contCard{
+        margin-top: 50%;
+        height: 300px;
+        
+        .title{
+            color: #E8A900;
+            text-align: center;
+        }
+    
+        .text-msg{
+            color: #101010;
+            text-align: left;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    
+        .input-email{
+            position: relative;
+            border: 1px solid #cecece;
+            left: 5%;
+            right: 5%;
+            width: 90%;
+            background-color: #D9D9D9;
+        }
+
+        ion-button{
+            margin-top: 5%;
+            background-color: #E8A900;
+            width: 80%;
+            margin-left: 10%;
+        }
+        
+           
+    }
+    
+}
+
+

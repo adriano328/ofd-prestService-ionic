@@ -1,0 +1,51 @@
+.header-column{
+    background-color: #e8a900;
+    height: 50px;
+
+    .icon-back{
+        margin-top: 2%;
+        color: white;
+        font-size: 30px;
+    }
+}
+
+.navegate{
+    height: 30px;
+
+    .search-button{
+        text-align: center;
+        cursor: pointer;
+        border-right: 1px solid #cecece;
+    }
+    
+    .perfil-button{
+        text-align: center;
+        cursor: pointer;
+    }
+
+}
+
+.agenda{
+    // margin-top: 5%;
+    width: 100%;
+    
+    .agenda-list{
+        width: 90%;
+
+        .line-service{
+            background-color: #e8a900;
+            border-radius: 7px;
+        
+            .column-service{
+                border: 1px solid white;
+                font-size: 14px;
+            }
+        }
+    
+       ion-icon{
+        color: black;
+       }
+
+    }   
+   
+}

@@ -1,0 +1,34 @@
+<ion-header> </ion-header>
+<style></style>
+<ion-content>
+  <ion-content>
+    <div class="login_background">
+      <div class="logo-container">
+        <img class="logo" src="assets/icon/logo.png" alt="">
+      </div>
+      <div class="login_card">
+        <div class="container_input">
+          <div class="container-title">
+            <h5 class="title-login">Login</h5>
+          </div>
+          <div class="justify-input">
+            <form [formGroup]="form_signIn">
+              <ion-input class="inputText" formControlName="email" placeholder="E-mail"></ion-input>
+              <ion-input class="inputText" formControlName="senha" type="password" placeholder="Senha"></ion-input>
+            </form>
+          </div>
+          <div class="buttons">
+            <button class="button-style-class" (click)="signIn()">Entrar</button>
+            <button class="button-style-class-cadastrar" routerLink="/cadastro">Cadastrar</button>
+          </div>
+          <h5 *ngIf="loginIsValid" class="warning-login-error">Email ou senha incorretos!</h5>
+        </div>
+      </div>
+      <div class="esqueceu-container">
+        <p class="esqueceu-um">Esqueceu a senha? <button ion-button full outline class="esqueceu-dois"
+            routerLink="/forgot-password">Clique aqui</button></p>
+      </div>
+      <p style="color: #000; bottom: 5px; font-size: 12px; font-weight: lighter;">Powered by Kingdom Code &copy;</p>
+    </div>
+  </ion-content>
+</ion-content>

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar class="toolbar" >
+    <ion-icon name="chevron-back-outline" style="font-size: 40px; color: white;" routerLink="/login"></ion-icon>
+</ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card class="contCard">
+      <h1 class="title">Redefinir senha</h1>
+      <p class="text-msg">Caso tenha esquecido sua senha, por gentileza, informe o e-mail cadastrado
+        para enviarmos sua senha.</p>
+        <form [formGroup]="formForgotPassword">
+          <ion-input class="input-email" formControlName="email" placeholder="E-mail"></ion-input>
+        </form>
+        <ion-button (click)="forgotMyPassWord()" color="#E8A900">Redefinir</ion-button>
+        <ion-spinner *ngIf="showLoadingRequest" name="lines"></ion-spinner>
+        <h5 class="response-message" style="text-align: center;">{{messageResponse}}</h5>
+  </ion-card>
+
+
+</ion-content>

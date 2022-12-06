@@ -1,0 +1,33 @@
+<ion-header>
+  <div class="header-column">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="screen-self-user"></ion-back-button>
+    </ion-buttons>
+  </div>
+</ion-header>
+<ion-content>
+  <div class="agenda">
+    <ion-grid class="agenda-list">
+      <ion-row style="text-align: center;">
+        <ion-col>Data</ion-col>
+        <ion-col>Cliente</ion-col>
+        <ion-col>Visualizar</ion-col>
+      </ion-row>
+      <div *ngFor="let list of listServiceByPrestador">
+      <ion-row class="line-service" style="text-align: center;">
+          <ion-col class="column-service">{{list.horarioDeAtentimento}}</ion-col>
+          <ion-col class="column-service">{{list.cliente.nome}}</ion-col>
+          <ion-col class="column-service" style="text-align: center;"><ion-icon name="eye" routerLink="/screen-service-by-user/{{list.cliente.id}}"></ion-icon></ion-col>
+      </ion-row>
+    </div>
+    </ion-grid>
+  </div>  
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row class="navegate">
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

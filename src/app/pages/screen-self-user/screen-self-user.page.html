@@ -1,0 +1,63 @@
+<ion-content>
+  <ion-header>
+    <div class="header-column">
+      <ion-back-button class="icon-back" defaultHref="/professional-window"></ion-back-button>
+    </div>
+  </ion-header>
+  <div class="perfil">
+    <ion-card class="profile">
+      <div class="button-options">
+        <div class="options-button-icon" (click)="logout()">
+          <ion-icon class="option-icon" name="log-out"></ion-icon>
+          <p class="button-title">Sair</p>
+        </div>
+      </div>
+      <div class="img">
+        <img src="https://img-profile.s3.sa-east-1.amazonaws.com/{{usuarioStorage.imagemPerfil}}">
+      </div>
+      <div class="description">
+        <div class="name">
+          <p>{{usuarioStorage.nome}}</p>
+        </div>
+        <div class="agenda-user" *ngIf="genderClose">
+          <p class="text-serv">Serviços Agendados:</p>
+          <ion-card>
+            <div class="agenda">
+              <ion-grid class="agenda-list">
+                <ion-row style="text-align: center;">
+                  <ion-col>Data</ion-col>
+                  <ion-col>Prestador</ion-col>
+                  <ion-col>Visualização</ion-col>
+                </ion-row>
+                <div *ngFor="let list of listServiceByPrestador">
+                <ion-row style="text-align: center;" class="line-service">
+                    <ion-col class="column-service">{{list.horarioDeAtentimento}}</ion-col>
+                    <ion-col class="column-service">{{list.prestador.nome}}</ion-col>
+                    <ion-col class="column-service" style="text-align: center;"><ion-icon name="eye" routerLink="/screen-service-by-professional/{{list.prestador.id}}"></ion-icon></ion-col>
+                </ion-row>
+              </div>
+              </ion-grid>
+            </div>  
+          </ion-card>
+        </div>
+        <div class="button" *ngIf="canShow">
+          <button class="button-solicity" routerLink="/solicitation">Gestor de Serviços</button>
+        </div>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row class="navegate">
+        <ion-col size="6" class="search-button" routerLink="/professional-window">
+          <ion-icon name="search-outline" style="color: white; font-size: 20px;"></ion-icon>
+        </ion-col>
+        <ion-col size="6" class="perfil-button" routerLink="/screen-self-user">
+          <ion-icon name="person-outline" style="color: white; font-size: 20px;"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

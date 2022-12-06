@@ -1,0 +1,120 @@
+.buttons{
+  display: flex;
+  justify-content: center;
+  .button-save{
+    background-color: #e8a900;
+    width: 70%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-bottom: 10%;
+  }
+}
+
+ion-input{
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  background-color: #D3D3D3;
+  height: 40px;
+}
+
+select{
+  background-color: #cecece;
+  border-radius: 5px;
+  width: 50%;
+  height: 40px;
+  text-align: center;
+  color: black;
+  border: 1px solid #cecece;
+}
+
+::ng-deep .alert-checkbox-label.sc-ion-alert-md{
+  color: black;
+  border: none;
+}
+
+::ng-deep .alert-head.sc-ion-alert-md {
+  border: 1px solid #ffff;
+  background-color: #ffff;
+  border-radius: 5px;
+}
+
+::ng-deep .alert-button-group.sc-ion-alert-md{
+  border: 1px solid #ffff;
+  background-color: #ffff;
+  color: white;
+}
+
+::ng-deep .alert-radio-label.sc-ion-alert-md{
+  color: black;
+}
+
+::ng-deep .item-native{
+  border: 0px none;
+}
+
+.select-count{
+  margin-bottom: 5%;
+}
+
+.ocupations{
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+
+ion-card{
+  margin-top: 3%;
+}
+
+// ::ng-deep .alert-button.sc-ion-alert-md {
+//   background: #e8a900;
+// }
+
+::ng-deep .button-search{
+  background: #e8a900;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  font-size: 20px;
+}
+::ng-deep .input-cadastro{
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+}
+
+::ng-deep .alert-button-inner.sc-ion-alert-md{
+  color: black;
+  background-color: #fff;
+}
+
+::ng-deep .alert-radio-label.sc-ion-alert-md {
+  white-space: normal !important;
+  color: black;
+}
+
+::ng-deep .alert-checkbox-label {
+  white-space: normal !important;
+  }
+
+.cam-icon{
+  width: 15%;
+}
+
+.cam-icon-img{
+  display: flex;
+  justify-content: center;
+}
+
+.foto{
+  width: 95px;
+  height: 95px;
+}
+
+.camera{
+  width: 10%;
+}
+
+.camera-content{
+  display: flex;
+  justify-content: center;
+}

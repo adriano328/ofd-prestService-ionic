@@ -1,0 +1,44 @@
+<ion-header>
+  <div class="head">
+    <form [formGroup]="form">
+      <ion-searchbar class="search-input" placeholder="Busca" formControlName="filtro" (keyup)="getAllProfessionais()" fill="clear"></ion-searchbar>
+    </form>
+  </div>
+</ion-header>
+<ion-content>
+  <div class="ion-text-center">
+    <div fxLayout="row">
+        <ion-row>
+            <div *ngFor="let list of listProfissionais">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="6">
+                    <ion-card class="card-professional">
+                      <ion-card-content routerLink="/screen-user-to-prest/{{list.id}}">
+                        <img src="{{list.nome_imagem}}" width="100px">
+                        {{list.nome}}<br><br>
+                        {{list.profissao}}<br>
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+        </ion-row>
+      </div>
+    </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row class="navegate">
+        <ion-col size="6" class="search-button" routerLink="/professional-window">
+          <ion-icon name="search-outline" style="color: white; font-size: 20px;"></ion-icon>
+        </ion-col>
+        <ion-col size="6" class="perfil-button" routerLink="/screen-self-user">
+          <ion-icon name="person-outline" style="color: white; font-size: 20px;"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

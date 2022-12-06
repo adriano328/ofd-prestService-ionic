@@ -1,0 +1,7 @@
+{
+  "name": "Apolo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
